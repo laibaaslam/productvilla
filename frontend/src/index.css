@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Playfair Display', serif; */
+
+/* //navbar css */
+.navbar {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 29px;
+  /* text-transform: uppercase; */
+  box-shadow: 0 8px 6px -6px rgb(0, 0, 0);
+  /* in case our browser donot supprt  */
+  /* --webkit-box-shadow: 0 8px 6px -6px gray;   */
+  /* important since we are overwrititng existing class */
+  border-bottom: solid rgb(197, 197, 197) !important;
+}
+
+/* for home register waighra */
+.nav-link {
+  font-weight: 500 !important;
+}
+
+/* when clicking home lgon link the line appearing */
+.active {
+  border-bottom: 2px solid rgb(134, 132, 132);
+}
+
+.navbar-brand {
+  font-weight: 550;
+  font-family: "roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* =============================
+==========footer============= */
+
+.footer {
+  color: white;
+  padding: 25px;
+  background: #073ab1;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right,
+      #0484b3, #0484b3);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #073ab1, #073ab1);
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.footer a:hover {
+  color: #f8e53d;
+  border-bottom: 1px solid #f8e53d;
+}
+
+/* =================================
+======== error page css ======= */
+.err {
+  display: flex;
+  min-height: 65vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.err-title {
+  font-size: 100px;
+  color: crimson;
+  font-weight: 600;
+}
+
+.err-heading {
+  color: crimson;
+  font-weight: normal;
+}
+
+.err-btn {
+  color: crimson;
+  border-radius: 3px;
+  border: 3px solid black;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.err-btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+/* ========================================= */
+/* =========contact us ========= */
+.contactus {
+  margin: 0;
+  padding: 0;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-blk {
+  background-color: #046a8e;
+  border-radius: 5px;
+}
+
+/* ==================== */
+.product-link {
+  text-decoration: none !important;
+  color: black !important;
+}

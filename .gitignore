@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+frontend/node_modules/
+
+# environment and secrets
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# build and logs
+frontend/build/
+coverage/
+*.log
+npm-debug.log*
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

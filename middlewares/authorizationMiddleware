@@ -1,0 +1,42 @@
+// this file is used to protect our api routes by comparing JWT tokens
+import JWT from "jsonwebtoken";
+import userModel from "../models/user.js";
+
+//Protecting Routes token base our request 
+export const requireLogIn = async (req, res, next) => {
+    try {
+        // verifying token residing in req.header
+        const decode = JWT.verify(
+            req.headers.authorization,
+            process.env.JWT_SECRET
+        );
+
+        req.user = decode;
+        // middleware function next() come b/w req and res user is not provied acess to routes until authenticated
+        next();
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+//admin acceess  middle ware to check if admin is requesting
+export const isAdmin = async (req, res, next) => {
+    try {
+        const user = await userModel.findById(req.user._id);
+        if (user.role !== 1) {
+            return res.status(401).send({
+                success: false,
+                message: "Access Not Authorized",
+            });
+        } else {
+            next();
+        }
+    } catch (error) {
+        console.log(error);
+        res.status(401).send({
+            success: false,
+            error,
+            message: "Error in admin middelware",
+        });
+    }
+};
